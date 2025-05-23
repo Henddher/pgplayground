@@ -3,10 +3,17 @@ Postgres Playground
 
 Ref: https://hub.docker.com/_/postgres
 
+## Launch
+
+```shell
+docker compose up
+```
+
 ## Adminer Login
 
 From docker-compose.yaml
 
-host: db
-postgres: postgres
+server: db
+username: postgres
 password: example
+
