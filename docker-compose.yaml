@@ -8,6 +8,8 @@ services:
     # set shared memory limit when using docker compose
     shm_size: 128mb
     # or set shared memory limit when deploy via swarm stack
+    volumes:
+      - ./:/tsvdata/
     #volumes:
     #  - type: tmpfs
     #    target: /dev/shm
