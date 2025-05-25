@@ -36,7 +36,7 @@ wget -O - https://datasets.imdbws.com/name.basics.tsv.gz | gunzip > name.basics.
 From psql, load TSV
 
 ```sql
-create table names (nconst text, primaryName text, birthYear text, deathYear text, primaryProfession text[], knownForTitles text[]);
+create table names (nconst text, primaryName text, birthYear text, deathYear text, primaryProfession text, knownForTitles text);
 
 copy names from '/tsvdata/name.basics.tsv' (delimiter E'\t', header 1);
 ```
