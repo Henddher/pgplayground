@@ -1,0 +1,8 @@
+# for file in name.basics title.akas title.basics title.crew title.episode title.principals title.ratings; do echo "wget -O - https://datasets.imdbws.com/$file.tsv.gz | gunzip > $file.tsv"; done > wgetall
+wget -O - https://datasets.imdbws.com/name.basics.tsv.gz | gunzip > name.basics.tsv
+wget -O - https://datasets.imdbws.com/title.akas.tsv.gz | gunzip > title.akas.tsv
+wget -O - https://datasets.imdbws.com/title.basics.tsv.gz | gunzip > title.basics.tsv
+wget -O - https://datasets.imdbws.com/title.crew.tsv.gz | gunzip > title.crew.tsv
+wget -O - https://datasets.imdbws.com/title.episode.tsv.gz | gunzip > title.episode.tsv
+wget -O - https://datasets.imdbws.com/title.principals.tsv.gz | gunzip > title.principals.tsv
+wget -O - https://datasets.imdbws.com/title.ratings.tsv.gz | gunzip > title.ratings.tsv
