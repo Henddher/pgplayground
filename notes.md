@@ -23,3 +23,10 @@ names_professions_2 as (select * from names_professions join professions p on p.
 insert into name_profession (select names_professions_2.nconst, names_professions_2.pconst from names_professions_2);
 ```
 
+## many-to-many query
+
+```sql
+with actors_producers as (select np.nconst, count(*) from professions p join name_profession np on np.pconst = p.pconst where p.profession in ('actor', 'producer') group by np.nconst),
+actors_producers_2 as (select n.primaryname, n.primaryprofession from names n join actors_producers ap on ap.nconst = n.nconst where ap.count = 2)
+select * from actors_producers_2 limit 10;
+```
