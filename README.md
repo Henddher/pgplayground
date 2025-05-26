@@ -31,6 +31,8 @@ For each in https://datasets.imdbws.com/
 
 ```shell
 wget -O - https://datasets.imdbws.com/name.basics.tsv.gz | gunzip > name.basics.tsv
+# or
+./wgetall
 ```
 
 From psql, load TSV
