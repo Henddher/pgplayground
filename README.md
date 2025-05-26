@@ -42,3 +42,10 @@ create table names (nconst text, primaryName text, birthYear text, deathYear tex
 
 copy names from '/tsvdata/name.basics.tsv' (delimiter E'\t', header 1);
 ```
+
+## Slides
+
+```shell
+brew install slides
+slides ./slides/s10.md
+```
