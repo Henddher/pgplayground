@@ -38,9 +38,15 @@ wget -O - https://datasets.imdbws.com/name.basics.tsv.gz | gunzip > name.basics.
 From psql, load TSV
 
 ```sql
-create table names (nconst text, primaryName text, birthYear text, deathYear text, primaryProfession text, knownForTitles text);
+create table names (nconst text, primaryName text, birthYear integer, deathYear integer, primaryProfession text, knownForTitles text);
 
 copy names from '/tsvdata/name.basics.tsv' (delimiter E'\t', header 1);
+```
+
+For pets and owners mentioned in the slides:
+
+```sh
+docker exec pgplayground-db-1 psql -U postgres -c "$(cat owners_and_pets.sql)"
 ```
 
 ## Slides
